@@ -10,7 +10,15 @@ git-dashboard.
 ligatures – Prompt: Starship*
 <!-- LTeX: enabled=true -->
 
+**Top:** Recent commits (`git log`)  
+**Center:** Current Status (hybrid of `git status` and `git diff --stat`)  
+**Bottom:** Files in the current directory (via `eza`)
+
+Empty components, such as the `git status` in a clean repo, are automatically
+hidden.
+
 ## Table of Contents
+
 <!-- toc -->
 
 - [Installation](#installation)
