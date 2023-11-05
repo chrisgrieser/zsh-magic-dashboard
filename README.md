@@ -64,9 +64,7 @@ managers, though.
 <!-- vale Google.FirstPerson = YES -->
 
 ## Configuration
-
-Export these variables in your `~/.zshrc`. The values displayed are the default
-values.
+Export these variables in your `~/.zshrc`. The values displayed are the default.
 
 ```bash
 # Size of the dashboard
@@ -98,11 +96,12 @@ The pretty git log is available independently via `_gitlog` and accepts the same
 arguments as `git log`, for example:
 
 ```bash
-_gitlog # call via git's core.pager
-
 # display the last ten log entry
 _gitlog -n10
-alias gl='_gitlog' # useful shorthand
+
+# call via git's core.pager, like git log
+_gitlog
+alias gl='_gitlog'
 
 # Can also be piped to `fzf`. (Use the _gitlog-specific option `--no-graph` to
 # disable the graph, which messes up a lot of fzf-related things.)
