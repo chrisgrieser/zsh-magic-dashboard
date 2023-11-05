@@ -112,7 +112,7 @@ selected_hash=$(_gitlog --no-graph | fzf --ansi --no-sort | cut -d' ' -f1)
 ## Credits
 This plugin is based on [Magic
 Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter)
-[@dufferzafar](https://github.com/dufferzafar).
+by [@dufferzafar](https://github.com/dufferzafar).
 
 **About me**  
 In my day job, I am a sociologist studying the social mechanisms underlying the
