@@ -1,12 +1,5 @@
 #!/usr/bin/env zsh
 
-# CONFIG options for the user
-# export MAGIC_DASHBOARD_GITLOG_LINES # default: 5
-# export MAGIC_DASHBOARD_FILES_LINES # default: 6
-# export MAGIC_DASHBOARD_DISABLED_BELOW_TERM_HEIGHT # default: 15
-
-#───────────────────────────────────────────────────────────────────────────────
-
 # draws a separator line with terminal width
 function _separator {
 	local sep_char="═" # ─ ═
@@ -37,6 +30,7 @@ function _gitlog {
 			-e 's/ months* ago)/mo)/' \
 			-e 's/grafted/ /' \
 			-e 's/origin\//󰞶  /g' \
+			-e 's/upstream\//  /g' \
 			-e 's/HEAD/󱍞 /g' \
 			-e 's/tag: /  /' \
 			-e 's/\* /∘ /' \
@@ -75,8 +69,7 @@ function _gitstatus {
 		local unstaged staged
 		unstaged=$(git diff --color="always" --compact-summary --stat | sed -e '$d')
 		staged=$(git diff --staged --color="always" --compact-summary --stat | sed -e '$d' \
-			-e $'s/^ / \033[1;35m \033[0m\t/') # add marker for staged files
-		tabs -4                              # set tabwidth to 4 for stage marker (require for regex later)
+			-e $'s/^ / \033[1;35m \033[0m/') # add marker for staged files
 		local diffs=""
 		if [[ -n "$unstaged" && -n "$staged" ]]; then
 			diffs="$unstaged\n$staged"
@@ -90,8 +83,9 @@ function _gitstatus {
 			-e $'s/\\(new\\)/\033[1;32mN    \033[0m/g' \
 			-e 's/ Bin /    /g' \
 			-e 's/ bytes$/ b/g' \
-			-e $'s/ \\|/ \033[1;30m│\033[0m/g' \
-			-Ee $'s|([^/\t]*)(/)|\033[1;36m\\1\033[1;33m\\2\033[0m|g' # path highlights
+			-e $'s/ \\| Unmerged /  \033[1;31m  \033[0m /'\
+			-Ee $'s_([^/ ]*)(/)_\033[1;36m\\1\033[1;33m\\2\033[0m_g' \
+			-e $'s/ \\|/ \033[1;30m│\033[0m/g'
 		_separator
 	fi
 }
