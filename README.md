@@ -88,7 +88,7 @@ to modify your `cd` command to display the dashboard after the directory change.
 
 ```bash
 function cd {
-	cd "$@" && _magic-dashboard
+	command cd "$@" && _magic-dashboard
 }
 ```
 
