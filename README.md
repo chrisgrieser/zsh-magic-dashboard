@@ -39,8 +39,8 @@ hidden.
 - [Nerdfont](https://www.nerdfonts.com/)
 
 ### Manual
-Clone this repository somewhere on your machine. This guide assumes
-`~/.zsh/`.
+Clone this repository somewhere on your machine. This manual assumes
+you are using `~/.zsh/`.
 
 ```bash
 cd ~/.zsh # where to install the plugin
@@ -72,7 +72,7 @@ export MAGIC_DASHBOARD_GITLOG_LINES=5
 export MAGIC_DASHBOARD_FILES_LINES=6
 
 # Disable dashboard in low terminal windows. 
-# (Useful for some tmux or terminals embedded in your IDE.)
+# (Useful for tmux or for terminals embedded in your IDE.)
 export MAGIC_DASHBOARD_DISABLED_BELOW_TERM_HEIGHT=15
 ```
 
