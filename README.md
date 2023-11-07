@@ -50,7 +50,7 @@ git clone https://github.com/chrisgrieser/zsh-magic-dashboard
 Add the following to your `~/.zshrc`:
 
 ```bash
-source ~/.zsh/zsh-magic-dashboard/magic-dashboard.zsh
+source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
 ### Package Managers
@@ -88,7 +88,7 @@ to modify your `cd` command to display the dashboard after the directory change.
 
 ```bash
 function cd {
-	builtin cd "$@" && _magic-dashboard
+	builtin cd "$@" && _magic_dashboard
 }
 ```
 
