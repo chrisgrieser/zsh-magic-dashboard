@@ -1,8 +1,8 @@
 <!-- LTeX: enabled=false -->
 # zsh-magic-dashboard
 <!-- LTeX: enabled=true -->
-Pressing `enter` on an empty buffer displays an information-rich and pretty
-git-dashboard.
+Pressing `enter` on an empty buffer displays an information-rich and pretty 
+dashboard.
 
 ![Showcase](https://github.com/chrisgrieser/zsh-magic-dashboard/assets/73286100/1ae9ca48-cdca-4f54-8c8c-7e87fa051351)
 <!-- LTeX: enabled=false -->
@@ -10,11 +10,11 @@ git-dashboard.
 ligatures – Prompt: Starship*
 <!-- LTeX: enabled=true -->
 
-**Top:** Recent commits (`git log`)  
-**Center:** Current Status (hybrid of `git status` and `git diff --stat`)  
-**Bottom:** Files in the current directory (via `eza`)
+- **Top:** Recent commits (`git log`)  
+- **Center:** Current Status (hybrid of `git status` and `git diff --stat`)  
+- **Bottom:** Files in the current directory (via `eza`)
 
-Empty components, such as the `git status` in a clean repo, are automatically
+Empty components, such as `git status` in a clean repo, are automatically
 hidden.
 
 ## Table of Contents
