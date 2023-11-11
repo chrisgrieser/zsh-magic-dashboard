@@ -69,7 +69,7 @@ function _gitstatus {
 		unstaged=$(git diff --color="always" --compact-summary --stat=$COLUMNS | sed -e '$d')
 		staged=$(git diff --staged --color="always" --compact-summary --stat=$COLUMNS | sed -e '$d' \
 			-e $'s/^ /+/') # add marker for staged files
-		local diffs=""
+		local diffs
 		if [[ -n "$unstaged" && -n "$staged" ]]; then
 			diffs="$unstaged\n$staged"
 		elif [[ -n "$unstaged" ]]; then
@@ -96,17 +96,20 @@ function _magic_dashboard {
 	# check if pwd still exists
 	if [[ ! -d "$PWD" ]]; then
 		printf '\033[1;33m"%s" has been moved or deleted.\033[0m\n' "$(basename "$PWD")"
-		cd "$OLDPWD" || return 0
+		if [[ -d "$OLDPWD" ]] ; then
+			print '\033[1;33mMoving to last directory.\033[0m'
+			# shellcheck disable=2164
+			cd "$OLDPWD"
+		fi
+		return 0
 	fi
 
 	if git rev-parse --is-inside-work-tree &>/dev/null; then
 		local max_gitlog_lines=${MAGIC_DASHBOARD_GITLOG_LINES:-5}
 		_gitlog -n "$max_gitlog_lines"
 		_separator
-
 		_gitstatus
 	fi
-
 	_list_files_here
 }
 
