@@ -74,6 +74,9 @@ export MAGIC_DASHBOARD_FILES_LINES=6
 # Disable dashboard in low terminal windows. 
 # (Useful for tmux or for terminals embedded in your IDE.)
 export MAGIC_DASHBOARD_DISABLED_BELOW_TERM_HEIGHT=15
+
+# Make commit hashes & files clickable. Requires `git-delta`.
+export MAGIC_DASHBOARD_USE_HYPERLINKS=0 # set to `1` to enable
 ```
 
 ## Usage
