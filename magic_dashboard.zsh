@@ -80,7 +80,7 @@ function _list_files_here {
 
 function _gitstatus {
 	# so new files show up in `git diff`
-	git ls-files --others --exclude-standard | xargs git add --intent-to-add &>/dev/null
+	git ls-files --others --exclude-standard | xargs -I {} git add --intent-to-add {} &>/dev/null
 
 	if [[ -n "$(git status --porcelain)" ]]; then
 		local unstaged staged
