@@ -1,11 +1,9 @@
 <!-- LTeX: enabled=false -->
 # zsh-magic-dashboard
-<!-- LTeX: enabled=true -->
-Pressing `enter` on an empty buffer displays an information-rich and pretty 
+Pressing `enter` on an empty buffer displays an information-rich and pretty
 dashboard.
 
 ![Showcase](https://github.com/chrisgrieser/zsh-magic-dashboard/assets/73286100/1ae9ca48-cdca-4f54-8c8c-7e87fa051351)
-<!-- LTeX: enabled=false -->
 *Terminal: WezTerm – Theme: Tinacious Design – Font: Iosevka Term with partial
 ligatures – Prompt: Starship*
 <!-- LTeX: enabled=true -->
@@ -80,9 +78,7 @@ export MAGIC_DASHBOARD_USE_HYPERLINKS=0 # set to `1` to enable
 ```
 
 ## Usage
-<!-- vale Google.Exclamation = NO -->
 Just press `enter` on an empty buffer. That's it!
-<!-- vale Google.Exclamation = YES -->
 
 ### Other Usages
 
@@ -117,25 +113,16 @@ This plugin is based on [Magic
 Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter)
 by [@dufferzafar](https://github.com/dufferzafar).
 
-**About me**  
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-**Profiles**  
-- [Academic Website](https://chris-grieser.de/)
+- [Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
-- [GitHub](https://github.com/chrisgrieser/)
-- [Twitter](https://twitter.com/pseudo_meta)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
-<img
-	height='36'
-	style='border:0px;height:36px;'
-	src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-	border='0'
-	alt='Buy Me a Coffee at ko-fi.com'
-/></a>
+<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'> <img height='36'
+style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
