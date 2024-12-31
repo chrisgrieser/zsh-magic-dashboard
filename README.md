@@ -3,9 +3,7 @@
 Pressing `enter` on an empty buffer displays an information-rich and pretty
 dashboard.
 
-![Showcase](https://github.com/chrisgrieser/zsh-magic-dashboard/assets/73286100/1ae9ca48-cdca-4f54-8c8c-7e87fa051351)
-*Terminal: WezTerm – Theme: Tinacious Design – Font: Iosevka Term with partial
-ligatures – Prompt: Starship*
+![showcase](https://github.com/chrisgrieser/zsh-magic-dashboard/assets/73286100/1ae9ca48-cdca-4f54-8c8c-7e87fa051351)
 <!-- LTeX: enabled=true -->
 
 - **Top:** Recent commits (`git log`)  
@@ -15,18 +13,18 @@ ligatures – Prompt: Starship*
 Empty components, such as `git status` in a clean repo, are automatically
 hidden.
 
-## Table of Contents
+## Table of contents
 
 <!-- toc -->
 
 - [Installation](#installation)
-  * [Requirements](#requirements)
-  * [Manual](#manual)
-  * [Package Managers](#package-managers)
-    + [Oh My Zsh](#oh-my-zsh)
+	* [Requirements](#requirements)
+	* [Manual](#manual)
+	* [Package managers](#package-managers)
+		+ [oh-my-zsh](#oh-my-zsh)
 - [Configuration](#configuration)
 - [Usage](#usage)
-  * [Other Usages](#other-usages)
+- [Display dashboard on `cd`](#display-dashboard-on-cd)
 - [Credits](#credits)
 
 <!-- tocstop -->
@@ -52,18 +50,25 @@ Add the following to your `~/.zshrc`:
 source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
-### Package Managers
-I don't use a package manager, since they [are mostly unnecessary](https://www.youtube.com/watch?v=21_WkzBErQk)
-and even [increasing zsh loading time considerably](https://blog.jonlu.ca/posts/speeding-up-zsh).
+### Package managers
+I don't use a package manager, since they [are mostly
+unnecessary](https://www.youtube.com/watch?v=21_WkzBErQk) and even [increasing
+zsh loading time considerably](https://blog.jonlu.ca/posts/speeding-up-zsh).
 
-#### Oh My Zsh
-Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+Thus, this section only includes installation instructions from people who made
+a PR adding them.
+
+<!-- LTeX: enabled=false -->
+#### oh-my-zsh
+<!-- LTeX: enabled=true -->
+Clone this repository into `$ZSH_CUSTOM/plugins` (by default
+`~/.oh-my-zsh/custom/plugins`)
 
 ```bash
 git clone https://github.com/chrisgrieser/zsh-magic-dashboard ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-magic-dashboard
 ```
 
-Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+Add the plugin to the list of plugins for `oh-my-zsh` to load (inside `~/.zshrc`):
 
 ```bash
 plugins=( 
@@ -86,19 +91,14 @@ Export these variables in your `~/.zshrc`. The values displayed are the default.
 export MAGIC_DASHBOARD_GITLOG_LINES=5
 export MAGIC_DASHBOARD_FILES_LINES=6
 
-# Disable dashboard in low terminal windows. 
-# (Useful for tmux or for terminals embedded in your IDE.)
+# Disable dashboard in low terminal windows
 export MAGIC_DASHBOARD_DISABLED_BELOW_TERM_HEIGHT=15
-
-# Make commit hashes & files clickable. Requires `git-delta`.
-export MAGIC_DASHBOARD_USE_HYPERLINKS=0 # set to `1` to enable
 ```
 
 ## Usage
 Just press `enter` on an empty buffer. That's it!
 
-### Other Usages
-
+## Display dashboard on `cd`
 The dashboard call also be called via `_magic_dashboard`. One use case would be
 to modify your `cd` command to display the dashboard after the directory change.
 
@@ -124,11 +124,10 @@ alias gl='_gitlog'
 selected_hash=$(_gitlog --no-graph | fzf --ansi --no-sort | cut -d' ' -f1)
 ```
 
-<!-- vale Google.FirstPerson = NO -->
 ## Credits
 This plugin is based on [Magic
-Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter)
-by [@dufferzafar](https://github.com/dufferzafar).
+Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter) by
+[@dufferzafar](https://github.com/dufferzafar).
 
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
