@@ -20,12 +20,13 @@ hidden.
 <!-- toc -->
 
 - [Installation](#installation)
-	* [Requirements](#requirements)
-	* [Manual](#manual)
-	* [Package Managers](#package-managers)
+  * [Requirements](#requirements)
+  * [Manual](#manual)
+  * [Package Managers](#package-managers)
+    + [Oh My Zsh](#oh-my-zsh)
 - [Configuration](#configuration)
 - [Usage](#usage)
-	* [Other Usages](#other-usages)
+  * [Other Usages](#other-usages)
 - [Credits](#credits)
 
 <!-- tocstop -->
@@ -52,14 +53,30 @@ source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
 ### Package Managers
-<!-- vale Google.FirstPerson = NO -->
-I don't use a package manager, since they [are mostly
-unnecessary](https://www.youtube.com/watch?v=21_WkzBErQk) and even [increasing
-zsh loading time considerably](https://blog.jonlu.ca/posts/speeding-up-zsh).
+I don't use a package manager, since they [are mostly unnecessary](https://www.youtube.com/watch?v=21_WkzBErQk)
+and even [increasing zsh loading time considerably](https://blog.jonlu.ca/posts/speeding-up-zsh).
 
-I am open to pull requests adding instructions for package
-managers, though.
-<!-- vale Google.FirstPerson = YES -->
+#### Oh My Zsh
+Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+
+```bash
+git clone https://github.com/chrisgrieser/zsh-magic-dashboard ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-magic-dashboard
+```
+
+Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+
+```bash
+plugins=( 
+    # other plugins...
+    zsh-magic-dashboard
+)
+```
+
+Start a new terminal session.
+
+```bash
+source ~/.zshrc
+```
 
 ## Configuration
 Export these variables in your `~/.zshrc`. The values displayed are the default.
