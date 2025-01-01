@@ -84,14 +84,13 @@ source ~/.zshrc
 ```
 
 ## Configuration
-Export these variables in your `~/.zshrc`. The values displayed are the default.
+Export these variables in your `~/.zshrc`. The values displayed are the defaults.
 
 ```bash
-# Size of the dashboard
 export MAGIC_DASHBOARD_GITLOG_LINES=5
 export MAGIC_DASHBOARD_FILES_LINES=6
+export MAGIC_DASHBOARD_FILES_LINES=4
 
-# Disable dashboard in low terminal windows
 export MAGIC_DASHBOARD_DISABLED_BELOW_TERM_HEIGHT=15
 ```
 
@@ -106,22 +105,6 @@ to modify your `cd` command to display the dashboard after the directory change.
 function cd {
 	builtin cd "$@" && _magic_dashboard
 }
-```
-
-The pretty git log is available independently via `_gitlog` and accepts the same
-arguments as `git log`, for example:
-
-```bash
-# display the last ten log entry
-_gitlog -n10
-
-# call via git's core.pager, like git log
-_gitlog
-alias gl='_gitlog'
-
-# Can also be piped to `fzf`. (Use the _gitlog-specific option `--no-graph` to
-# disable the graph, which messes up a lot of fzf-related things.)
-selected_hash=$(_gitlog --no-graph | fzf --ansi --no-sort | cut -d' ' -f1)
 ```
 
 ## Credits
