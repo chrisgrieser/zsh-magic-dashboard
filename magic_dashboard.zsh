@@ -61,7 +61,8 @@ function _list_files_here {
 		eza --width="$COLUMNS" --all --grid --color=always --icons \
 			--git-ignore --ignore-glob=".DS_Store" \
 			--sort=oldest --group-directories-first --no-quotes \
-			--git --long --no-user --no-permissions --no-filesize --no-time
+			--git --long --no-user --no-permissions --no-filesize --no-time \
+      "$PWD"
 	)
 	# not using --hyperlink PENDING https://github.com/eza-community/eza/issues/693
 
