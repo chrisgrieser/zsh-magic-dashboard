@@ -128,6 +128,7 @@ function _magic_dashboard {
 		_gitstatus
 	fi
 	_list_files_here
+	print "\n\n"
 }
 
 #───────────────────────────────────────────────────────────────────────────────
