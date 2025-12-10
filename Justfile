@@ -1,3 +1,3 @@
 # transfer from my zsh config
 transfer:
-	cp -vf $ZDOTDIR/plugins/magic_dashboard.zsh ./
+	cp -vf $ZDOTDIR/config/magic_dashboard.zsh ./

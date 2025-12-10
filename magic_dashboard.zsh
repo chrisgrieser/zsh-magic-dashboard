@@ -50,7 +50,7 @@ function _gitlog {
 			-Ee $'s/`[^`]*`/\e[0;36m&\e[0m/g' \
 			-Ee $'s/#[0-9]+/\e[0;31m&\e[0m/g' \
 			-Ee "s_([a-f0-9]{7,40})_\x1b]8;;https://github.com/${repo}/commit/\1\x1b\\\\\1\x1b]8;;\x1b\\\\_"
-		# INFO last replacements adds hyperlink to hashes
+		# INFO last replacements adds hyperlinks to hashes
 }
 
 function _list_files_here {
