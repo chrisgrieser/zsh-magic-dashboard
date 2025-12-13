@@ -1,3 +1,4 @@
-# transfer from my zsh config
-transfer:
-	cp -vf $ZDOTDIR/config/magic_dashboard.zsh ./
+set quiet := true
+
+transfer-from-my-zsh-config:
+    cp -vf $ZDOTDIR/config/magic_dashboard.zsh ./
