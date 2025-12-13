@@ -33,19 +33,21 @@ hidden.
 ### Requirements
 - [eza](https://github.com/eza-community/eza)
 - [Nerdfont](https://www.nerdfonts.com/)
+- *optional:* A terminal that supports `OSC8` for hashes and issues to be
+  clickable.
 
 ### Manual
 Clone the repository somewhere on your machine. This manual assumes
 you are using `~/.zsh/`.
 
-```bash
+```zsh
 cd ~/.zsh/ # where to install the plugin
 git clone https://github.com/chrisgrieser/zsh-magic-dashboard
 ```
 
 Add the following to your `~/.zshrc`:
 
-```bash
+```zsh
 source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
@@ -55,13 +57,13 @@ source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 Clone this repository into `$ZSH_CUSTOM/plugins` (by default
 `~/.oh-my-zsh/custom/plugins`)
 
-```bash
+```zsh
 git clone https://github.com/chrisgrieser/zsh-magic-dashboard ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-magic-dashboard
 ```
 
 Add the plugin to the list of plugins for `oh-my-zsh` to load (inside `~/.zshrc`):
 
-```bash
+```zsh
 plugins=( 
     # other plugins...
     zsh-magic-dashboard
@@ -70,7 +72,7 @@ plugins=(
 
 Start a new terminal session.
 
-```bash
+```zsh
 source ~/.zshrc
 ```
 
