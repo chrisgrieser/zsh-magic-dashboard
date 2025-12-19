@@ -1,4 +1,4 @@
-# zsh-magic-dashboard
+# Zsh-magic-dashboard
 Pressing `enter` on an empty buffer displays an information-rich and pretty
 dashboard.
 
@@ -51,7 +51,7 @@ source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
 <!-- LTeX: enabled=false -->
-### oh-my-zsh
+### Oh-my-zsh
 <!-- LTeX: enabled=true -->
 Clone this repository into `$ZSH_CUSTOM/plugins` (by default
 `~/.oh-my-zsh/custom/plugins`)
