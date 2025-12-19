@@ -1,4 +1,3 @@
-<!-- LTeX: enabled=false -->
 # zsh-magic-dashboard
 Pressing `enter` on an empty buffer displays an information-rich and pretty
 dashboard.
@@ -18,9 +17,9 @@ hidden.
 <!-- toc -->
 
 - [Installation](#installation)
-	* [Requirements](#requirements)
-	* [Manual](#manual)
-	* [oh-my-zsh](#oh-my-zsh)
+    - [Requirements](#requirements)
+    - [Manual](#manual)
+    - [oh-my-zsh](#oh-my-zsh)
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Display dashboard on `cd`](#display-dashboard-on-cd)
@@ -61,7 +60,8 @@ Clone this repository into `$ZSH_CUSTOM/plugins` (by default
 git clone https://github.com/chrisgrieser/zsh-magic-dashboard ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-magic-dashboard
 ```
 
-Add the plugin to the list of plugins for `oh-my-zsh` to load (inside `~/.zshrc`):
+Add the plugin to the list of plugins for `oh-my-zsh` to load (inside
+`~/.zshrc`):
 
 ```zsh
 plugins=( 
@@ -77,7 +77,8 @@ source ~/.zshrc
 ```
 
 ## Configuration
-Export these variables in your `~/.zshrc`. The values displayed are the defaults.
+Export these variables in your `~/.zshrc`. The values displayed are the
+defaults.
 
 ```bash
 export MAGIC_DASHBOARD_GITLOG_LINES=5
