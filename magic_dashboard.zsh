@@ -53,6 +53,7 @@ function _gitlog {
 			-Ee "s_([a-f0-9]{7,40})_\x1b]8;;https://github.com/${repo}/commit/\1\x07\1\x1b]8;;\x07_" \
 			-Ee "s_#([0-9]+)_\x1b]8;;https://github.com/${repo}/issues/\1\x07#\1\x1b]8;;\x07_"
 		# INFO last two replacements adds hyperlinks to hashes and issues
+		# \x1b]8;;{URL}\x07{TITLE}\x1b]8;;\x07
 }
 
 function _list_files_here {
