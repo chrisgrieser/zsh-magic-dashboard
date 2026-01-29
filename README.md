@@ -3,7 +3,6 @@ Pressing `enter` on an empty buffer displays an information-rich and pretty
 dashboard.
 
 ![Showcase](https://github.com/user-attachments/assets/4ad050cc-4fce-4199-a80b-afbbefbba88d)
-<!-- LTeX: enabled=true -->
 
 - **Top:** Recent commits (`git log`)
 - **Center:** Current Status (hybrid of `git status` and `git diff --stat`)
@@ -15,16 +14,14 @@ hidden.
 ## Table of contents
 
 <!-- toc -->
-
 - [Installation](#installation)
     - [Requirements](#requirements)
     - [Manual](#manual)
     - [oh-my-zsh](#oh-my-zsh)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Display dashboard on `cd`](#display-dashboard-on-cd)
+- [Display dashboard on cd](#display-dashboard-on-cd)
 - [Credits](#credits)
-
 <!-- tocstop -->
 
 ## Installation
@@ -32,7 +29,7 @@ hidden.
 ### Requirements
 - [eza](https://github.com/eza-community/eza)
 - [Nerdfont](https://www.nerdfonts.com/)
-- *optional:* A terminal that supports `OSC8` for hashes and issues to be
+- *Optional:* A terminal that supports `OSC8` for hashes and issues to be
   clickable.
 
 ### Manual
@@ -50,9 +47,8 @@ Add the following to your `~/.zshrc`:
 source ~/.zsh/zsh-magic-dashboard/magic_dashboard.zsh
 ```
 
-<!-- LTeX: enabled=false -->
-### Oh-my-zsh
-<!-- LTeX: enabled=true -->
+<!-- rumdl-disable-next-line MD063 -->
+### oh-my-zsh
 Clone this repository into `$ZSH_CUSTOM/plugins` (by default
 `~/.oh-my-zsh/custom/plugins`)
 
@@ -102,8 +98,7 @@ function cd {
 
 ## Credits
 This plugin is based on [Magic
-Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter) by
-[@dufferzafar](https://github.com/dufferzafar).
+Enter](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/magic-enter) by [@dufferzafar](https://github.com/dufferzafar).
 
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
